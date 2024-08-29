@@ -9,9 +9,9 @@ cd aws-devops-pipeline
 ### Step 2 - Build and run docker container
 
 ```
-docker build -t webapp .
+docker build -t webappimage:latest .
 ```
 
 ```
-docker run -dp 3000:3000 webapp
+docker run -d --name webapp -p 3000:3000 webappimage:latest
 ```
